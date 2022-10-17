@@ -37,6 +37,19 @@ const todoReducer = (state = initData, action: IActionModel<IItemModel | IItemId
                 list: state.list.filter(i => i.id !== id)
             }
         }
+        case 'EDIT_TODO': {
+            const {id, data} = action.payload as IItemModel
+            state.list = state.list.map((todo) => {
+                if (todo.id === id) {
+                    return {
+                        ...todo,
+                        item: data,
+                    };
+                }
+                return todo;
+            });
+            return state;
+        }
         default:
             return state;
     }
