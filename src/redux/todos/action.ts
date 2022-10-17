@@ -16,8 +16,12 @@ export const deleteTodo = (id: string) => {
         }
     }
 }
-export const removeTodo = () => {
+export const edit = (id: string, data: string) => {
     return {
-        type: 'REMOVE_TODO'
+        type: 'EDIT_TODO',
+        payload: {
+            id: id,
+            data: data
+        }
     }
 }
