@@ -30,7 +30,7 @@ export const Todo = () => {
         <div className="App">
             <Container>
                 <div>
-                    <h1>Hello antd</h1>
+                    <h1>Hello antd Framework</h1>
                 </div>
                 <TodoListComponent/>
                 <Search placeholder="type your todo ..."
